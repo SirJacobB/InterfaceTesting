@@ -1,5 +1,5 @@
 
-public class Person implements Comparable{
+public class Person implements Comparable<Person>{
 
 	private String fName;
 	private String lName;
@@ -36,8 +36,8 @@ public class Person implements Comparable{
 	}
 
 	@Override
-	public int compareTo(Object arg0) {
-		// TODO Auto-generated method stub
+	public int compareTo(Person o) {
+		
 		return 0;
 	}
 }
