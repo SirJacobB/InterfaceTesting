@@ -37,7 +37,15 @@ public class Person implements Comparable<Person>{
 
 	@Override
 	public int compareTo(Person o) {
+
+		String str1 = fName.substring(0, 2);
+		String str2 = lName.substring(0, 2);
 		
-		return 0;
+		if(str2.compareTo(o.getlName()) == 0) {
+			return str1.compareTo(o.getfName());
+		}
+		else {
+			return str2.compareTo(o.getlName());
+		}
 	}
 }
