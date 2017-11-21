@@ -1,26 +1,43 @@
 
-public class Person{
+public class Person implements Comparable{
 
-	private String fname;
-	private String lname;
-	
+	private String fName;
+	private String lName;
+	private int index;
+
 	Person(String fullName){
+
+		char[] cArr = fullName.toCharArray();
+
+		for(int i = 0; i < cArr.length; i++) {
+			if(cArr[i] == ' ') {
+				index = i;
+			}
+		}
 		
+		this.fName = fullName.substring(index+1);
+		this.lName = fullName.substring(0, index);
 	}
-	
+
 	public String getfName() {
-		return fname;
+		return fName;
 	}
-	
+
 	public void setfName(String fName) {
-		this.fname = fName;
+		this.fName = fName;
 	}
-	
+
 	public String getlName() {
-		return lname;
+		return lName;
 	}
-	
+
 	public void setlName(String lName) {
-		this.lname = lName;
+		this.lName = lName;
+	}
+
+	@Override
+	public int compareTo(Object arg0) {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 }
