@@ -18,6 +18,10 @@ public class Person implements Comparable<Person>{
 		this.fName = fullName.substring(index+1);
 		this.lName = fullName.substring(0, index);
 	}
+	
+	public String getFullName() {
+		return lName + " " + fName;
+	}
 
 	public String getfName() {
 		return fName;

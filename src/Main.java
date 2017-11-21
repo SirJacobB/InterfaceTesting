@@ -1,6 +1,7 @@
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
 
 public class Main {
@@ -17,7 +18,11 @@ public class Main {
 			persons.add(p);
 		}
 		
-		System.out.println(persons);
+		Collections.sort(persons);
+		
+		for(Person p : persons) {
+			System.out.println(p.getFullName());
+		}
 		
 		sc.close();
 	}
