@@ -15,7 +15,7 @@ public class Person implements Comparable<Person>{
 			}
 		}
 		
-		this.fName = fullName.substring(index+1);
+		this.fName = fullName.substring(index);
 		this.lName = fullName.substring(0, index);
 	}
 	
